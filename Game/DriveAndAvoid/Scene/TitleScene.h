@@ -17,7 +17,7 @@ public:
 	virtual~TitleScene();
 
 	virtual void Initialize() override;
-	virtual eScebeType Update() override;
+	virtual eSceneType Update() override;
 	virtual void Draw() const override;
 	virtual void Finalize() override;
 
