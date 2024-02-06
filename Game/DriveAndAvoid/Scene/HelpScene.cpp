@@ -41,7 +41,7 @@ eSceneType HelpScene::Update()
 void HelpScene::Draw() const
 {
 	//”wŒi‰æ‘œ‚Ì•`‰æ
-	DrawGraph(0, 0, background_image.FALSE);
+	DrawGraph(0, 0, background_image,FALSE);
 
 	//ƒQ[ƒ€à–¾
 	SetFontSize(16);

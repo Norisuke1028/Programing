@@ -85,7 +85,7 @@ eSceneType GameMainScene::Update()
 	//敵の更新と当たり判定チェック
 	for (int i = 0; i < 10; i++)
 	{
-		if (enemy[i] != nellptr)
+		if (enemy[i] != nullptr)
 		{
 			enemy[i]->Update(player->GetSpeed());
 
@@ -136,7 +136,7 @@ void GameMainScene::Draw() const
 	}
 
 	//プレイヤーの描画
-	plyaer->Draw();
+	player->Draw();
 
 	//UIの描画
 	DrawBox(500, 0, 640, 480, GetColor(0, 153, 0), TRUE);
@@ -250,7 +250,7 @@ void GameMainScene::ReadHighScore()
 }
 
 //当たり判定処理（プレイヤーと数）
-bool GameMainScene::IsHitCheck(player* p, Enemy* e)
+bool GameMainScene::IsHitCheck(Player* p, Enemy* e)
 {
 	//プレイヤーがバリアを貼っていたら、当たり判定を無視する
 	if (p->IsBarrier())

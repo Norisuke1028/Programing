@@ -53,20 +53,6 @@ public:
 		return Vector2D(x, y);
 	}
 
-	const Vector2D operator-(const Vector2D& location)
-	{
-		float x = this->x - location.x;
-		float y = this->y - location.y;
-
-		return Vector2D(x, y);
-	}
-	const Vector2D operator*(const float& scalar)
-	{
-		float x = this->x * scalar;
-		float y = this->y * scalar;
-
-		return Vector2D(x, y);
-	}
 	const Vector2D operator*(const Vector2D& location)
 	{
 		float x = this->x * location.x;
@@ -74,6 +60,7 @@ public:
 
 		return Vector2D(x, y);
 	}
+	
 	const Vector2D operator/(const float& scalar)
 	{
 		if (scalar < 1e-6f)
@@ -118,7 +105,15 @@ public:
 
 		return *this;
 	}
-	Vector2D& operator/=(const float& scalar)
+	Vector2D& operator*=(const Vector2D& location)
+	{
+		
+			this->x *= location.x;
+			this->y *= location.y;
+
+			return *this;
+	}
+	Vector2D& operator /=(const float& scalar)
 	{
 		if (scalar < 1e-6f)
 		{

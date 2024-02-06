@@ -55,7 +55,7 @@ void RankingDispScene::Draw() const
 }
 
 //I—¹ˆ—
-void RankigDispScene::Finalize()
+void RankingDispScene::Finalize()
 {
 	//“Ç‚İ‚ñ‚¾‰æ‘œ‚Ìíœ
 	DeleteGraph(background_image);
