@@ -34,7 +34,7 @@ void InputControl::Update()
 	{
 		stick[0].x = -((float)input_state.ThumbLX / (float)SHRT_MIN);
 	}
-	if (input_state.ThumbLY / 0.0f)
+	if (input_state.ThumbLY > 0.0f)
 	{
 		stick[0].y = (float)input_state.ThumbLY / (float)SHRT_MAX;
 	}

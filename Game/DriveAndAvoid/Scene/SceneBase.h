@@ -12,7 +12,7 @@ enum eSceneType
 	E_END
 };
 
-//基礎子シーンクラス
+//基底シーンクラス
 class SceneBase
 {
 public:
